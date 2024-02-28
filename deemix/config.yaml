@@ -14,7 +14,7 @@ ports:
 ports_description:
   6595/tcp: Web interface
 environment:
-  ARL: 
+  ARL: TBD
   UMASK_SET: 022
   TZ: Europe/Paris
   PGID: 0
@@ -24,13 +24,13 @@ options:
   PUID: 0
   TZ: Europe/Paris
   UMASK_SET: 022
-  ARL: 
+  ARL: TBD
 schema:
-  PGID: int
-  PUID: int
-  TZ: str?
-  UMASK_SET: int
-  ARL: str?
+  PGID: "int"
+  PUID: "int"
+  TZ: "str?"
+  UMASK_SET: "int"
+  ARL: "str?"
 panel_icon: mdi:music-box-multiple
 map:
   - share:rw
