@@ -17,8 +17,8 @@ environment:
   ARL: TBD
   UMASK_SET: "022"
   TZ: Europe/Paris
-  #PGID: "0"
-  #PUID: "0"
+  PGID: "0"
+  PUID: "0"
 options:
   PGID: 0
   PUID: 0
