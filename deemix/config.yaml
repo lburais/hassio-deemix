@@ -6,6 +6,7 @@ slug: deemix
 arch:
   - aarch64
   - amd64
+init: false
 url: https://github.com/lburais/hassio-addons/tree/master/deemix
 startup: application
 webui: http://[HOST]:[PORT:6595]
