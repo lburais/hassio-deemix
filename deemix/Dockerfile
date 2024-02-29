@@ -1,4 +1,7 @@
-FROM lsiobase/alpine:3.15
+#FROM lsiobase/alpine:3.15
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
 
 RUN apk add --no-cache curl jq
 
