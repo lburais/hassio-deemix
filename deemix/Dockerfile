@@ -1,9 +1,14 @@
 FROM lsiobase/alpine:3.15
 
 RUN apk add --no-cache curl jq
-ARG TARGETARCH
+
+# ARG TARGETARCH
+ARG BUILD_ARCH
+ENV TARGETARCH=${BUILD_ARCH}
+
 ARG STATIC_URL
 ARG BUILDDATE
+
 ENV BUILDDATEENV=${BUILDDATE}
 
 LABEL \
@@ -13,7 +18,8 @@ LABEL \
     app.deemix.image.description="Docker image for Deemix" \
     maintainer="Bocki"
 
-RUN curl -L $STATIC_URL/deemix-server-linux-$TARGETARCH -o deemix-server
+# RUN curl -L $STATIC_URL/deemix-server-linux-$TARGETARCH -o deemix-server
+RUN curl -L https://gitlab.com/api/v4/projects/19217373/packages/generic/static/static/deemix-server-linux-arm64 -o deemix-server
 
 COPY root/ /
 
