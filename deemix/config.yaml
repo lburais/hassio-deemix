@@ -9,7 +9,7 @@ arch:
   - amd64
 # machine:
 url: https://github.com/lburais/hassio-addons/tree/master/deemix
-startup: services
+startup: application
 webui: http://[HOST]:[PORT:6595]
 boot: auto
 ports:
