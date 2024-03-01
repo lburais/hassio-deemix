@@ -1,14 +1,13 @@
 #!/usr/bin/with-contenv bash
 
-set -e
-
 # test write access to download and config folder and test internet connectivity
 printf '[cont-init.d] Fixing Folder Permissions - Config Folder\n'
 
-whoami
-cat /etc/passwd
+#whoami
+#cat /etc/passwd
 
-chown -R abc:abc /config
+#chown -R abc:abc /config
+ls -la /config
 
 # find all folders in the download folder and own them to the container user. This will not change files but should run quicker on big collections.
 if [ ! -z ${DISABLE_OWNERSHIP_CHECK} ]; then
@@ -17,7 +16,6 @@ else
     printf '[cont-init.d] Fixing Folder Permissions - Downloads Folder\n'
 	find /downloads -type d -exec chown abc:abc {} +
 fi
-
 
 # add executability to server
 chmod +x /deemix-server

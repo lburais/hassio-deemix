@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-set -e
-
 ls -la /
 
 # test write access to download and config folder and test internet connectivity
