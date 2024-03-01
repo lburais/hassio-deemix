@@ -24,7 +24,7 @@ LABEL \
 RUN curl -L https://gitlab.com/api/v4/projects/19217373/packages/generic/static/static/deemix-server-linux-arm64 -o deemix-server
 
 COPY root/ /
-RUN chmod -R a+x /etc
+RUN chmod -R +x /etc
 
 EXPOSE 6595
 ENTRYPOINT [ "/init" ]
