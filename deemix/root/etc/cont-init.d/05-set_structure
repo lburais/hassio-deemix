@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+printf '[cont-init.d] Setting structure\n'
+
+adduser -D abc
+
+ln -s /homeassistant/deemix /config
+ln -s /share/deemix /downloads
+
+ls -la /homeassistant
+ls -la /share
+ls -la /
+
