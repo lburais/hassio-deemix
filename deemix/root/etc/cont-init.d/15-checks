@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 ls -la /
+ls -la /config
 
 # test write access to download and config folder and test internet connectivity
 printf '[cont-init.d] Testing Access\n' && \

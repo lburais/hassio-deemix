@@ -7,6 +7,7 @@ printf '[cont-init.d] Fixing Folder Permissions - Config Folder\n'
 #cat /etc/passwd
 
 #chown -R abc:abc /config
+ls -la /
 ls -la /config
 
 # find all folders in the download folder and own them to the container user. This will not change files but should run quicker on big collections.
