@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.1
+version: 1.0.2
 description: deemix
 slug: deemix
 arch:
@@ -17,14 +17,16 @@ ports:
 ports_description:
   6595/tcp: Web interface
 # host*
+host_network: false
 # devices
 # homeassistant*
 # hassio*
 hassio_api: true
 hassio_role: manager
+docker_api: false
 # priviledge
 # full_access
-apparmor: false
+apparmor: true
 map:
   - addons:rw
   - all_addon_configs:rw
@@ -73,6 +75,8 @@ panel_icon: mdi:music-box-multiple
 panel_title: Deemix
 # panel_admin
 # backup*
+backup_exclude:
+  - "**/downloads/**"
 # advanced
 # stage
 init: false
