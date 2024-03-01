@@ -1,5 +1,8 @@
 #!/usr/bin/with-contenv bash
 
+id abc
+useradd abc
+
 ln -s /homeassistant/deemix /config
 ln -s /share/deemix /downloads
 

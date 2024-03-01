@@ -25,7 +25,6 @@ RUN curl -L https://gitlab.com/api/v4/projects/19217373/packages/generic/static/
 
 COPY root/ /
 RUN chmod -R +x /etc
-RUN useradd abc
 
 EXPOSE 6595
 ENTRYPOINT [ "/init" ]
