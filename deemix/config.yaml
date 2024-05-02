@@ -6,6 +6,7 @@ description: deemix
 slug: deemix
 arch:
   - amd64
+  - aarch64
   - armv7
   - arm64
 # machine:
