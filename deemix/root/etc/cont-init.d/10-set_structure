@@ -6,30 +6,29 @@ chmod +x /deemix-server
 
 printf '[cont-init.d] Creating abc user\n'
 
-adduser -D abc
+adduser --disabled-password --uid 0 --ingroup root abc
 
 printf '[cont-init.d] Setting downloads folder\n'
 
 mkdir -p /share/Freebox/Musiques
-# chown -R abc:abc /share/deemix
 ln -s /share/Freebox/Musiques /downloads
 
-if [ ! -z ${DISABLE_OWNERSHIP_CHECK} ]; then
-    printf '[cont-init.d] Download Folder Ownership Check disabled by Environment Variable\n'
-else
-    printf '[cont-init.d] Fixing Folder Permissions - Downloads Folder\n'
-	  find /downloads -type d -exec chown abc:abc {} +
-fi
+# if [ ! -z ${DISABLE_OWNERSHIP_CHECK} ]; then
+#     printf '[cont-init.d] Download Folder Ownership Check disabled by Environment Variable\n'
+# else
+#     printf '[cont-init.d] Fixing Folder Permissions - Downloads Folder\n'
+# 	  find /downloads -type d -exec chown abc:abc {} +
+# fi
 
 printf '[cont-init.d] Setting config folder\n'
 
 mkdir -p /homeassistant/deemix
-chown -R abc:abc /homeassistant/deemix
+# chown -R abc:abc /homeassistant/deemix
 ln -s /homeassistant/deemix /config
 
 if [ -f "/deemix/config.json" ]; then
     cp /deemix/config.json /config/config.json
-    chown abc:abc /config/config.json
+    # chown abc:abc /config/config.json
     rm /deemix/config.json
 fi
 
