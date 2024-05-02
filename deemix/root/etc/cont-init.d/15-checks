@@ -1,12 +1,12 @@
 #!/usr/bin/with-contenv bash
 
-printf "/homeassistant"
-ls -la /homeassistant
-printf "/share"
-ls -la /share
-printf "/config"
-ls -la /config
-printf "/"
+printf "/homeassistant\n"
+ls -la /homeassistant/
+printf "/share\n"
+ls -la /share/
+printf "/config\n"
+ls -la /config/
+printf "/\n"
 ls -la /
 
 # test write access to download and config folder and test internet connectivity
