@@ -5,5 +5,9 @@ printf '[cont-init.d] Setting structure\n'
 adduser -D abc
 
 mkdir -p /homeassistant/deemix
+chown -R abc:abc /homeassistant/deemix
 ln -s /homeassistant/deemix /config
+
+mkdir -p /share/deemix
+chown -R abc:abc /share/deemix
 ln -s /share/deemix /downloads
