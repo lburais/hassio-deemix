@@ -23,7 +23,7 @@ LABEL \
 ENV STATIC_URL="https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035"
 RUN if [ $TARGET_ARCH = "aarch64" ]; then \
         echo $TARGET_ARCH; \
-        curl -L $STATIC_URL/deemix-server-linux-arm64 -o deemix-server; \
+        curl -L https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035/deemix-server-linux-arm64 -o deemix-server; \
     else \
         curl -L $STATIC_URL/deemix-server-linux-$TARGETARCH -o deemix-server; \
     fi
