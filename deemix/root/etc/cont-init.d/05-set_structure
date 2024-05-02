@@ -11,3 +11,10 @@ ln -s /homeassistant/deemix /config
 mkdir -p /share/deemix
 chown -R abc:abc /share/deemix
 ln -s /share/deemix /downloads
+
+if [ ! -z ${DISABLE_OWNERSHIP_CHECK} ]; then
+    printf '[cont-init.d] Download Folder Ownership Check disabled by Environment Variable\n'
+else
+    printf '[cont-init.d] Fixing Folder Permissions - Downloads Folder\n'
+	  find /downloads -type d -exec chown abc:abc {} +
+fi
