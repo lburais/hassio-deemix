@@ -5,8 +5,9 @@ version: 1.0.9
 description: deemix
 slug: deemix
 arch:
-  - aarch64
   - amd64
+  - armv7
+  - arm64
 # machine:
 url: https://github.com/lburais/hassio-addons/tree/master/deemix
 startup: services
