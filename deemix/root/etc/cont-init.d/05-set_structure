@@ -2,11 +2,11 @@
 
 printf '[cont-init.d] Setting structure\n'
 
+printf '[cont-init.d] Creating abc user
+
 adduser -D abc
 
-mkdir -p /homeassistant/deemix
-chown -R abc:abc /homeassistant/deemix
-ln -s /homeassistant/deemix /config
+printf '[cont-init.d] Setting downloads folder\n'
 
 mkdir -p /share/deemix
 chown -R abc:abc /share/deemix
@@ -18,3 +18,16 @@ else
     printf '[cont-init.d] Fixing Folder Permissions - Downloads Folder\n'
 	  find /downloads -type d -exec chown abc:abc {} +
 fi
+
+printf '[cont-init.d] Setting config folder\n'
+
+mkdir -p /homeassistant/deemix
+chown -R abc:abc /homeassistant/deemix
+ln -s /homeassistant/deemix /config
+
+# Fix misconfigured download locations. The container's download map is always /downloads.
+if [ -f "/config/config.json" ]; then
+    jq '.downloadLocation = "/downloads"' /config/config.json > tmp.$$.json && mv tmp.$$.json /config/config.json
+    chown abc:abc /config/config.json
+fi
+
