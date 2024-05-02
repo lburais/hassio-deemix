@@ -10,9 +10,9 @@ adduser -D abc
 
 printf '[cont-init.d] Setting downloads folder\n'
 
-mkdir -p /share/deemix
-chown -R abc:abc /share/deemix
-ln -s /share/deemix /downloads
+mkdir -p /share/Freebox/Musiques
+# chown -R abc:abc /share/deemix
+ln -s /share/Freebox/Musiques /downloads
 
 if [ ! -z ${DISABLE_OWNERSHIP_CHECK} ]; then
     printf '[cont-init.d] Download Folder Ownership Check disabled by Environment Variable\n'
@@ -26,6 +26,12 @@ printf '[cont-init.d] Setting config folder\n'
 mkdir -p /homeassistant/deemix
 chown -R abc:abc /homeassistant/deemix
 ln -s /homeassistant/deemix /config
+
+if [ -f "/deemix/config.json" ]; then
+    cp /deemix/config.json /config/config.json
+    chown abc:abc /config/config.json
+    rm /deemix/config.json
+fi
 
 # Fix misconfigured download locations. The container's download map is always /downloads.
 if [ -f "/config/config.json" ]; then

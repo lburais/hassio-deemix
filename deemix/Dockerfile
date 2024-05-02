@@ -31,5 +31,7 @@ RUN if [ ${TARGETARCH} = "aarch64" ]; then \
 COPY root/ /
 RUN chmod -R +x /etc
 
+COPY config/ /deemix
+
 EXPOSE 6595
 ENTRYPOINT [ "/init" ]
