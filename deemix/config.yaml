@@ -1,4 +1,3 @@
----
 name: "Deemix"
 version: "0.0.0"
 description: "deemix"
@@ -8,9 +7,9 @@ arch:
   - arm64
   - armv7
   - amd64
-url: "https://github.com/lburais/hassio-deemix/tree/master/deemix",
-startup: "application",
-webui: "http://[HOST]:[PORT:6595]",
+url: "https://github.com/lburais/hassio-deemix/tree/master/deemix"
+startup: "application"
+webui: "http://[HOST]:[PORT:6595]"
 ports:
   6595/tcp: 6595
 ports_description:
