@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 0.0.1
+version: 0.0.2
 description: deemix
 slug: deemix
 arch:
@@ -10,7 +10,7 @@ arch:
   - armv7
 # machine:
 url: https://github.com/lburais/hassio-deemix/tree/master/deemix
-startup: services
+startup: application
 webui: http://[HOST]:[PORT:6595]
 boot: auto
 ports:
