@@ -28,9 +28,6 @@ RUN if [ $TARGET_ARCH = "aarch64" ]; then \
         curl -L $STATIC_URL/deemix-server-linux-$TARGETARCH -o deemix-server; \
     fi
 
-RUN echo $(ls -la /) 
-RUN echo $(curl -L $STATIC_URL/deemix-server-linux-arm64 -o deemix-server)
-
 COPY root/ /
 RUN chmod -R +x /etc
 

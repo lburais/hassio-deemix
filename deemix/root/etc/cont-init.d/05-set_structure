@@ -6,8 +6,3 @@ adduser -D abc
 
 ln -s /homeassistant/deemix /config
 ln -s /share/deemix /downloads
-
-ls -la /homeassistant
-ls -la /share
-ls -la /
-

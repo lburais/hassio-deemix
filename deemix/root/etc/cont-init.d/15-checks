@@ -1,5 +1,10 @@
 #!/usr/bin/with-contenv bash
 
+ls -la /homeassistant
+ls -la /share
+ls -la /config
+ls -la /
+
 # test write access to download and config folder and test internet connectivity
 printf '[cont-init.d] Testing Access\n' && \
 printf '%-50s %2s %-5s \n' "[cont-init.d] Container Builddate" ":" "$BUILDDATEENV" && \
