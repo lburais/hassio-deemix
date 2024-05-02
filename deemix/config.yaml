@@ -4,7 +4,6 @@ description: "deemix"
 slug: "deemix"
 arch:
   - aarch64
-  - arm64
   - armv7
   - amd64
 url: "https://github.com/lburais/hassio-deemix/tree/master/deemix"
@@ -16,10 +15,10 @@ ports_description:
   6595/tcp: "Web interface"
 environment:
   ARL: ""
-  UMASK_SET: 022
+  UMASK_SET: "022"
   TZ: "Europe/Paris"
-  PGID: 0
-  PUID: 0
+  PGID: "0"
+  PUID: "0"
 options:
   PGID: 0
   PUID: 0
