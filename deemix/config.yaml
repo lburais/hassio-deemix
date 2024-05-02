@@ -5,6 +5,8 @@ description: "deemix"
 slug: "deemix"
 arch:
   - aarch64
+  - arm64
+  -armv7
   - amd64
 url: "https://github.com/lburais/hassio-deemix/tree/master/deemix",
 startup: "application",
