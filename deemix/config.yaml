@@ -1,88 +1,37 @@
 ---
-# https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
-name: Deemix
-version: 1.0.10
-description: deemix
-slug: deemix
+name: "Deemix"
+version: "0.0.0"
+description: "deemix"
+slug: "deemix"
 arch:
-  - amd64
   - aarch64
-  - armv7
-  - arm64
-# machine:
-url: https://github.com/lburais/hassio-addons/tree/master/deemix
-startup: services
-webui: http://[HOST]:[PORT:6595]
-boot: auto
+  - amd64
+url: "https://github.com/lburais/hassio-addons/tree/master/deemix",
+startup: "application",
+webui: "http://[HOST]:[PORT:6595]",
 ports:
   6595/tcp: 6595
 ports_description:
-  6595/tcp: Web interface
-# host*
-host_network: false
-# devices
-# homeassistant*
-# hassio*
-hassio_api: true
-hassio_role: manager
-docker_api: false
-# priviledge
-# full_access
-apparmor: true
-map:
-  - addons:rw
-  - all_addon_configs:rw
-  - backup:rw
-  - homeassistant_config:rw
-  - media:rw
-  - share:rw
-  - ssl:rw
+  6595/tcp: "Web interface"
 environment:
-  ARL: TBD
-  UMASK_SET: "022"
-  TZ: Europe/Paris
-  PGID: "0"
-  PUID: "0"
-# audio
-# video
-# gpio
-# usb
-# uart
-# udev
-# devicetree
-# kernel_modules
-# stdin
-# legacy
+  ARL: ""
+  UMASK_SET: 022
+  TZ: "Europe/Paris"
+  PGID: 0
+  PUID: 0
 options:
   PGID: 0
   PUID: 0
-  TZ: Europe/Paris
+  TZ: "Europe/Paris"
   UMASK_SET: 022
-  ARL: TBD
+  ARL: ""
 schema:
   PGID: "int"
   PUID: "int"
   TZ: "str?"
   UMASK_SET: "int"
   ARL: "str?"
-# image
-# codenotary
-# timeout
-# tmpfs
-# discovery
-# services
-# auth_api
-# ingress*
-panel_icon: mdi:music-box-multiple
-panel_title: Deemix
-# panel_admin
-# backup*
-backup_exclude:
-  - "**/downloads/**"
-# advanced
-# stage
-init: false
-# watchdog
-# realtime
-# journald
-# breaking_versions
+panel_icon: "mdi:music-box-multiple"
+map:
+  - share:rw
+  - config:rw
