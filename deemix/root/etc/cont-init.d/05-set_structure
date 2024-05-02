@@ -2,6 +2,8 @@
 
 printf '[cont-init.d] Setting structure\n'
 
+chmod +x /deemix-server
+
 printf '[cont-init.d] Creating abc user
 
 adduser -D abc
