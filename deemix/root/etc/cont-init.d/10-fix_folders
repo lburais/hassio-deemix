@@ -1,4 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-printf '[cont-init.d] Fixing Folders\n'
-
