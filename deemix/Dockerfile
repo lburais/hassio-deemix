@@ -21,15 +21,9 @@ LABEL \
     maintainer="Bocki"
 
 ENV STATIC_URL="https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035"
-RUN echo "STATIC: ${STATIC_URL}" > /logs
-RUN echo "TARGET: ${TARGETARCH}" >> /logs
-RUN echo "CURL: ${STATIC_URL}/deemix-server-linux-arm64" >> /logs
-RUN echo $(curl -L "${STATIC_URL}/deemix-server-linux-arm64" -o deemix-server) >> /logs
-RUN echo "CURL: https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035/deemix-server-linux-arm64" >> /logs
-RUN echo $(curl -L "https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035/deemix-server-linux-arm64" -o deemix-server) >> /logs
 
 RUN if [ ${TARGETARCH} = "aarch64" ]; then \
-        curl -L https://gitlab.com/api/v4/projects/19217373/packages/generic/2022.12.14-r222.5d447b6035/2022.12.14-r222.5d447b6035/deemix-server-linux-arm64 -o deemix-server; \
+        curl -L "${STATIC_URL}/deemix-server-linux-arm64" -o deemix-server; \
     else \
         curl -L "${STATIC_URL}/deemix-server-linux-${TARGETARCH}" -o deemix-server; \
     fi
