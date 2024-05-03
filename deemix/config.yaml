@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.3
+version: 1.0.4
 description: deemix
 slug: deemix
 arch:
@@ -62,7 +62,7 @@ schema:
   PGID: "int"
   PUID: "int"
   TZ: "str?"
-  UMASK_SET: "int"
+  UMASK_SET: "str?"
   ARL: "str?"
 # image
 # codenotary
