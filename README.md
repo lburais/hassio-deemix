@@ -1,5 +1,8 @@
 # Deemix Add-ons by Laurent Burais
 
+![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Flburais%2Fhassio-deemix%2Fmaster%2Fdeemix%2Fconfig.yaml)
+![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2Flburais%2Fhassio-deemix%2Fmaster%2Fdeemix%2Fconfig.yaml)
+
 Deemix ...
 
 ## Installation

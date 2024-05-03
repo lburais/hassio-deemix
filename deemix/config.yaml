@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.4
+version: 1.0.5
 description: deemix
 slug: deemix
 arch:
@@ -37,7 +37,7 @@ map:
   - share:rw
   - ssl:rw
 environment:
-  ARL: TBD
+  ARL: "TBD"
   UMASK_SET: "022"
   TZ: Europe/Paris
   PGID: "0"
@@ -53,16 +53,16 @@ environment:
 # stdin
 # legacy
 options:
-  PGID: 0
-  PUID: 0
-  TZ: Europe/Paris
-  UMASK_SET: 022
+#  PGID: 0
+#  PUID: 0
+#  TZ: Europe/Paris
+#  UMASK_SET: 022
   ARL: TBD
 schema:
-  PGID: "int"
-  PUID: "int"
-  TZ: "str?"
-  UMASK_SET: "str?"
+#  PGID: "int"
+#  PUID: "int"
+#  TZ: "str?"
+#  UMASK_SET: "str?"
   ARL: "str?"
 # image
 # codenotary
