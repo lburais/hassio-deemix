@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.8
+version: 1.0.9
 description: deemix
 slug: deemix
 arch:
@@ -11,7 +11,7 @@ arch:
 # machine:
 url: https://github.com/lburais/hassio-deemix/tree/master/deemix
 startup: application
-#vwebui: http://[HOST]:[PORT:6595]
+webui: http://[HOST]:[PORT:6595]
 boot: auto
 ports:
   6595/tcp: 6595
@@ -59,10 +59,10 @@ options:
 #  UMASK_SET: 022
   ARL: TBD
 schema:
-#  PGID: "int"
-#  PUID: "int"
-#  TZ: "str?"
-#  UMASK_SET: "str?"
+  PGID: "int"
+  PUID: "int"
+  TZ: "str?"
+  UMASK_SET: "str?"
   ARL: "str?"
 # image
 # codenotary
@@ -73,10 +73,10 @@ schema:
 # auth_api
 # ingress*
 ingress: true
-ingress_port: 0
+ingress_port: 6595
 ingress_stream: true
 panel_icon: mdi:music-box-multiple
-panel_title: Deemix
+panel_title: deemix
 # panel_admin
 # backup*
 backup_exclude:
