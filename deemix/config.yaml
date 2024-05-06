@@ -74,7 +74,7 @@ schema:
 ingress: true
 ingress_port: 6595
 # ingress_entry: /
-ingress_stream: true
+# ingress_stream: true
 panel_icon: mdi:music-box-multiple
 panel_title: deemix
 # panel_admin
