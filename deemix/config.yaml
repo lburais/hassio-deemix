@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.6
+version: 1.0.7
 description: deemix
 slug: deemix
 arch:
@@ -73,7 +73,7 @@ schema:
 # auth_api
 # ingress*
 ingress: true
-ingress_port: 6595
+ingress_port: 0
 ingress_stream: true
 panel_icon: mdi:music-box-multiple
 panel_title: Deemix
