@@ -71,9 +71,9 @@ schema:
 # discovery
 # services
 # auth_api
-# ingress*
 ingress: true
 ingress_port: 6595
+ingress_entry: /
 ingress_stream: true
 panel_icon: mdi:music-box-multiple
 panel_title: deemix
