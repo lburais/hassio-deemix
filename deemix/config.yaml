@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.5
+version: 1.0.6
 description: deemix
 slug: deemix
 arch:
@@ -22,9 +22,9 @@ host_network: false
 # devices
 # homeassistant*
 # hassio*
-hassio_api: true
-hassio_role: manager
-docker_api: false
+# hassio_api: true
+# hassio_role: manager
+# docker_api: false
 # priviledge
 # full_access
 apparmor: true
