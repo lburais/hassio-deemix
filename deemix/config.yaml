@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.15
+version: 1.0.16
 description: deemix
 slug: deemix
 arch:
@@ -32,7 +32,7 @@ apparmor: true
 map:
   - config:rw
   - backup:rw
-  - share:ro
+  - share:rw
   - ssl:ro
   - media:ro
 # - addons:rw
