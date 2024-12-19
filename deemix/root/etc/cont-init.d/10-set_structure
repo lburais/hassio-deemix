@@ -11,8 +11,8 @@ echo "abc:x:1000:" >> /etc/group
 
 printf '[cont-init.d] Setting downloads folder\n'
 
-mkdir -p /share/Freebox/Musiques
-ln -s /share/Freebox/Musiques /downloads
+mkdir -p /share/Pharaoh/Musiques
+ln -s /share/Pharaoh/Musiques /downloads
 
 printf '[cont-init.d] Setting config folder\n'
 
