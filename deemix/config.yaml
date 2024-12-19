@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration/#add-on-configuration
 name: Deemix
-version: 1.0.16
+version: 1.0.17
 description: deemix
 slug: deemix
 arch:
