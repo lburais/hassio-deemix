@@ -43,7 +43,7 @@ map:
 # - share:rw
 # - ssl:rw
 environment:
-  ARL: "TBD"
+  ARL: "9ad1900f48100f6cf5ab2c0c321a02bd4728972946d4315b9452eba72a45f0b34f5b2b333f16609252769b44431e77c78c3931ebbb193ba0a0ff7f7bf19edce842264e4eec1c6d649a8d23a0370387e179d12cf5bfa2e9ef5ec0ca58cd7fcdac"
   UMASK_SET: "022"
   TZ: Europe/Paris
   PGID: "0"
